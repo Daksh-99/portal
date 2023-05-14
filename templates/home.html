@@ -1,0 +1,21 @@
+{%extends "Base.html"%}
+
+{%block title%}<h1>ALL PROJECTS</h1>{%endblock%}
+
+{%block body%}
+<div class="row"  margin-top=5>
+{%for item in project%}
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text">{{item.details}}</p>
+          <a href="../details/{{item.id}}" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+
+{%endfor%}
+</div>
+{%endblock%}

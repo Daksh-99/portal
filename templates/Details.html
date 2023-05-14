@@ -1,0 +1,23 @@
+{%extends "Base.html"%}
+
+{%block title%}
+<h1 class="text-center my-4">Project Detials</h1>
+{%endblock%}
+
+{%block body%}
+<div class="container">    
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2>{{details}}</h2>
+        <p class="text-muted">By {{proposer}}</p>
+        <hr>
+        <p>{{details}}</p>
+        {%for item in people%}
+        <ul>
+            <li>{{item.name}}</li>
+        </ul>
+        {%endfor%}
+      </div>
+  </div>
+
+{%endblock%}
